@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <style>
+
+
+        .post{
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            margin: 50px;
+            background-color: rgb(192, 190, 186);
+            flex: 1;
+            max-width: 500px;
+            
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .images{
+            display: grid;
+            grid-template-columns: auto auto;
+            width:100% ;
+            
+            grid-gap: 10px;
+            object-fit: contain;
+            border-collapse: collapse;
+            
+        }
+        .images > img{
+            width:100%;
+        }
+        .actions{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+            
+        }
+        .profile  {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            align-items: center;
+        }
+      .profile-picture > img{
+        border-radius: 360px;
+        height: 60px;
+        
+      }
+      .name-and-time > div{
+        font-size:smaller;
+        font-weight: bold;
+        align-content: center;
+
+      }
+      .time {
+         font-family:'Courier New', Courier, monospace;
+         color: #6a6258;
+      }
+     
+    </style>
+    <body>
+    
+<div class="post">
+    <div class="header">
+        <div class="profile">
+            <div class="profile-picture">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvOz2uNpFRXuDhvmqC-LSaNLvxRmwTW6KLGA&s" alt="profile"/>
+            </div>
+            <div class="name-and-time">
+                <div class="name">Santhosh</div>
+                <div class="time">posted 2 mins ago</div>
+            </div>
+        </div>
+        <div class="options">X</div>
+    </div>
+    <div class="content">
+        <div class="text-content">A day at park</div>
+        <div class="images">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Halleyparknovember_b.jpg/600px-Halleyparknovember_b.jpg"/>
+            <img src="https://images.pexels.com/photos/158028/bellingrath-gardens-alabama-landscape-scenic-158028.jpeg?cs=srgb&dl=pexels-pixabay-158028.jpg&fm=jpg"/>
+            <img src="https://media.istockphoto.com/id/841278554/photo/beautiful-morning-light-in-public-park-with-green-grass-field.jpg?s=1024x1024&w=is&k=20&c=5n5BuqdDCb2KgdugAVfS93VwjsRWNcHQPhUp7pa-2r4="/>
+            <img src="https://static4.depositphotos.com/1004999/269/i/950/depositphotos_2693490-stock-photo-beautiful-park.jpg"/>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="like"> Like </div>
+        <div class="comment"> Comment</div>
+        <div class="share"> Share</div>
+    </div>
+</div>
+</body>
+</head>
