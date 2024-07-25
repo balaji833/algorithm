@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    form {
+      width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+
+    label {
+      display: flex;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      margin-bottom: 10px;
+
+
+    }
+
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 6px;
+      align-items: center;
+    }
+
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+
+    .input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .form-row input[type="text"] {
+      width: 100%;
+    }
+
+    .gender-options label {
+      display: flex;
+      margin-right: 10px;
+    }
+
+    .terms-conditions {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .firstline {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+
+    }
+
+    .secondline {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+    }
+
+    .gender {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .firstline>input {
+      border-width: solid;
+      border-width: 2px;
+      height: 5px;
+
+
+    }
+
+    .firstline>label {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .box {
+      display: flex;
+      flex-direction: row;
+
+    }
+
+    .thirdline {
+      display: flex;
+      flex-direction: row;
+      border-right: 30px;
+
+    }
+
+    .fourthline {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .cammon {
+      display: grid;
+
+
+    }
+
+    .secondline>input {
+      border-width: solid;
+      border-width: 2px;
+      height: 5px;
+
+    }
+
+    .message>textarea {
+      border-width: solid;
+      border-width: 2px;
+      width: 96%;
+
+    }
+
+    .email>input {
+      border-width: solid;
+      border-width: 2px;
+      width: 96%;
+
+    }
+
+    .address>input {
+      border-width: solid;
+      border-width: 2px;
+      width: 96%;
+
+
+    }
+
+    .item>input {
+      display: flex;
+      border-width: solid;
+      border-width: 2px;
+      width: 86%;
+      justify-content: space-between;
+      flex: 1;
+    }
+
+    .cammon {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .like {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+
+      flex: 1;
+
+    }
+
+    .like>div {
+      flex: 1;
+    }
+
+    .check {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .error {
+      border: 2px solid red !important;
+    }
+    .item>label::after{
+      content:" *";
+      color: red;
+    }
+    .email>label::after{
+      content:" *";
+      color: red;
+
+    }
+    .address>label::after{
+      content:" *";
+      color: red;
+
+
+    }
+  </style>
+  <script>
+
+
+
+    function validateForm() {
+
+      var firstName = document.getElementById("firstName");
+      if (firstName.value.trim() === "") {
+        firstName.classList.add("error");
+      } else {
+        firstName.classList.remove("error");
+
+      }
+      var lastName = document.getElementById("lastName");
+      if (lastName.value.trim() === "") {
+        lastName.classList.add("error");
+      } else {
+        lastName.classList.remove("error");
+
+      }
+      var phone = document.getElementById("phone");
+      if (phone.value.trim() === "") {
+        phone.classList.add("error");
+      } else {
+        phone.classList.remove("phone");
+
+      }
+      var email = document.getElementById("email");
+      if (email.value.trim() === "") {
+        email.classList.add("error");
+      } else {
+        email.classList.remove("error");
+
+      }
+      var address = document.getElementById("address");
+      if (address.value.trim() === "") {
+        address.classList.add("error");
+      } else {
+        address.classList.remove("error");
+
+      }
+      var street = document.getElementById("street");
+      if (street.value.trim() === "") {
+        street.classList.add("error");
+      } else {
+        street.classList.remove("error");
+
+      }
+      var postalCode = document.getElementById("postalCode");
+      if (postalCode.value.trim() === "") {
+        postalCode.classList.add("error");
+      } else {
+        postalCode.classList.remove("error");
+
+      }
+      var city = document.getElementById("city");
+      if (city.value.trim() === "") {
+        city.classList.add("error");
+      } else {
+        city.classList.remove("error");
+
+      }
+      var firstName = document.getElementById("firstName").value;
+      if (firstName == "") {
+
+        return false;
+
+
+      }
+      var lastname = document.getElementById("lastName").value;
+      if (lastname == "") {
+        alert("latName must be filled");
+        return false;
+
+
+      }
+      var phone = document.getElementById("phone").value;
+      if (phone == "") {
+        alert("phoneNumber must be filled");
+        return false;
+
+      }
+      var email = document.getElementById("email").value;
+      if (email == "") {
+        alert("email must be filled");
+        return false;
+
+      }
+      var address = document.getElementById("address").value;
+      if (address == "") {
+        alert("address must be filled");
+        return false;
+      }
+      var street = document.getElementById("street").value;
+      if (street == "") {
+        alert("street must be filled");
+        return false;
+      }
+      var postalCode = document.getElementById("postalCode").value;
+      if (postalCode == "") {
+        alert("postalCode must be filled");
+        return false;
+      }
+      var city = document.getElementById("city").value;
+      if (city == "") {
+        alert("city must be filled");
+        return false;
+
+      }
+      var email = document.getElementById("email").value;
+      var emailpattern = /[a-z0-9]+@[a-z]+\.[a-z]{2,}/;
+
+      if (!emailpattern.test(email)) {
+        alert("please enter a valid email address")
+        return false;
+      }
+
+
+      alert("Form Submitted")
+
+  }
+
+
+
+
+  </script>
+
+</head>
+
+<body>
+
+  <form name="myForm" onsubmit="return false">
+    <h1>Simple Form Design</h1>
+    <div class="firstline">
+      <div class="item">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="item">
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div class="item">
+
+        <label for="phone">Mobile/Land line</label>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+    </div>
+    <div class="email">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <small>Format: exmple@gmail.com</small>
+
+    </div>
+
+    <div class="address">
+      <label for="address">Address Line</label>
+      <input type="text" id="address" name="address">
+
+
+    </div>
+
+    <div class="secondline">
+      <div class="item">
+        <label for="street">Street</label>
+        <input type="text" id="street" name="street">
+      </div>
+      <div class="item">
+
+        <label for="postalCode">Postal Code</label>
+        <input type="text" id="postalCode" name="postalCode">
+      </div>
+      <div class="item">
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="city">
+      </div>
+    </div>
+
+    <div>
+      <label>Gender</label>
+      <div class="gender">
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+      </div>
+    </div>
+
+    <div>
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="">--Choose your country--</option>
+        <option value="">India</option>
+        <option value="">Finland</option>
+        <option value="">Amarica</option>
+        <option value="">Spain</option>
+        <option value="">Brazil</option>
+        <option value="">france</option>
+        <option value="">Scotland</option>
+      </select>
+    </div>
+
+    <div>
+      <div class="like">
+
+        <div>
+
+          <label>I like</label>
+
+          <div class="check">
+
+            <input type="checkbox" id="cola" name="like" value="cola">
+            <label for="cola">Cola</label>
+            <input type="checkbox" id="soda" name="like" value="soda">
+            <label for="soda">Soda</label>
+          </div>
+
+        </div>
+
+
+        <div>
+          <label>I Love</label>
+
+
+          <div class="fourthline">
+
+
+
+            <input type="radio" id="css" name="love" value="css">
+            <label for="css">CSS</label>
+            <input type="radio" id="scss" name="love" value="scss">
+            <label for="scss">SCSS</label>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="message">
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+
+      <div class="box">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I accept terms and conditions</label>
+      </div>
+
+      <button onclick="validateForm()" type="submit">Submit</button>
+  </form>
+</body>
+
+</html>
