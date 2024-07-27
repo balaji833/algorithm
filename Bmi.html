@@ -105,21 +105,21 @@
             category = "Underweight ";
             var resultElement = document.getElementById("result")
             resultElement.classList = ("danger")
-            category.classname = "Underweight";
+            
 
          }
          else if (bmi >= 18.5 && bmi < 24.9) {
             category = "Normalweight";
             var resultElement = document.getElementById("result")
             resultElement.classList = ("good")
-            category.classname = "Normalweight";
+            
 
          }
          else if (bmi >= 25 && bmi < 29.9) {
             category = "Overweight";
             var resultElement = document.getElementById("result")
             resultElement.classList = ("bad")
-            category.classname = "Overweight";
+            
 
          }
          document.getElementById("result").innerText = "your BMI value is:" + bmi + "(" + category + ")";
