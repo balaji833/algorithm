@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<head>
+   <style>
+      body {
+         margin: 0%;
+         padding: 0%;
+         background-color: rgb(75, 128, 171);
+
+      }
+
+      .myForm {
+         width: 24%;
+         ;
+         margin: 300px;
+         padding: 20px;
+         border: none;
+         border-radius: 3px;
+         background-color: rgb(149, 175, 197);
+         box-shadow: inset;
+      }
+
+      .height {
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 20px;
+      }
+
+      .height>label {
+         margin-top: 20px;
+         font-size: larger;
+
+
+      }
+
+      .height>input {
+         width: 300px;
+         min-height: 30px;
+
+      }
+
+      .button {
+         border: none;
+         padding-right: 10px;
+         padding-left: 10px;
+         padding-top: 10px;
+         padding-bottom: 10px;
+         border-radius: 3px;
+         background: rgb(53, 52, 52);
+         color: white;
+         transition-duration: 0.3s;
+         cursor: pointer;
+
+
+      }
+
+      .button:hover {
+         background-color: rgb(156, 150, 150);
+         color: rgb(56, 48, 48);
+
+
+      }
+
+      .myForm>h1 {
+         text-align: center;
+      }
+
+      .result {
+         margin-top: 20px;
+         font-size: larger;
+      }
+   </style>
+   <script>
+      function BMIcalculate() {
+         var heightinCM = document.getElementById("height-in-cm").value;
+         if (heightinCM == "") {
+            alert("please enter a valid height");
+            return false;
+         }
+         var weightinKG = document.getElementById("weight-in-kg").value;
+         if (weightinKG == "") {
+            alert("please enter a valid weight")
+            return false;
+
+         }
+         var height = heightinCM / 100;
+         var bmi = weightinKG / (height * height)
+
+         var category;
+         if (bmi < 18.5) {
+            category = "Underweight";
+         }
+         else if (bmi >= 18.5 && bmi < 24.9) {
+            category = "Normalweight";
+         }
+         else if (bmi >= 25 && bmi < 29.9) {
+            category = "Overweight";
+         }
+         document.getElementById("result").innerText = "your BMI value is:" + bmi + "(" + category + ")";
+
+      }
+   </script>
+</head>
+
+<body>
+   <form class="myForm" onsubmit="return false">
+      <h1>BMI CALCULATOR</h1>
+      <div class="height">
+         <label for="heightin-cm">Height in CM:</label>
+         <input type="number" id="height-in-cm" name="heightinCM" required>
+
+
+         <label for="weight-in-kg">Weight in KG:</label>
+         <input type="number" id="weight-in-kg" name="weightinkG" required>
+      </div>
+      <button class="button" type="submit" onclick="BMIcalculate()">Calculate</button>
+      <div id="result" class="result"></div>
+   </form>
+
+
+</body>
+
+</html>
