@@ -69,6 +69,18 @@
          margin-top: 20px;
          font-size: larger;
       }
+
+      .Underweight {
+         color: red;
+      }
+
+      .Normalweight {
+         color: green ;
+      }
+
+      .Overweight {
+         color: yellow;
+      }
    </style>
    <script>
       function BMIcalculate() {
@@ -85,20 +97,30 @@
          }
          var height = heightinCM / 100;
          var bmi = weightinKG / (height * height)
+         var bmi = bmi.toFixed(2);
+
 
          var category;
          if (bmi < 18.5) {
             category = "Underweight";
+            category.classname = "Underweight";
+
          }
          else if (bmi >= 18.5 && bmi < 24.9) {
             category = "Normalweight";
+            category.classname = "Normalweight";
+
          }
          else if (bmi >= 25 && bmi < 29.9) {
             category = "Overweight";
+            category.classname = "Overweight";
+
          }
          document.getElementById("result").innerText = "your BMI value is:" + bmi + "(" + category + ")";
 
       }
+
+
    </script>
 </head>
 
@@ -115,6 +137,7 @@
       </div>
       <button class="button" type="submit" onclick="BMIcalculate()">Calculate</button>
       <div id="result" class="result"></div>
+
    </form>
 
 
