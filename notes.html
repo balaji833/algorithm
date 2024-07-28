@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .container {
+            width: 20%;
+            padding: 20px;
+            background-color: rgb(105, 94, 94);
+            height: 50vh;
+            border-radius: 5px;
+        }
+
+        .container>input {
+            width: 260px;
+            height:30px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(198, 202, 205);
+            margin-top: px;
+        }
+
+        .container>h1 {
+            margin-top: 40%;
+            text-align: center;
+            color: rgb(124, 127, 131);
+
+        }
+
+        .add {
+            padding-top: 4px;
+            padding-left: 7px;
+            padding-bottom: 4px;
+            padding-right: 7px;
+            border-radius: 5px;
+            border: none;
+            font-size: large;
+            color: rgb(124, 119, 119);
+            background-color: rgb(198, 202, 205);
+            cursor: pointer;
+
+        }
+    </style>
+    <script>
+        function notes() {
+            var textToBeAdded = document.getElementById("text").value;
+            var ul = document.getElementById("notes-list");
+            var li = document.createElement("li");
+            li.innerText = textToBeAdded;
+            ul.appendChild(li);
+            
+        }            
+            
+        
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        
+        <input type="typing" id="text" placeholder="Enter a notes" name="typing">
+        <button id="add" class="add" onclick="notes()">+</button>
+        
+        
+        
+        <ul id="notes-list"></ul>
+    </div>
+
+</body>
+
+</html>
