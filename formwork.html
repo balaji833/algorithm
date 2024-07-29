@@ -392,6 +392,8 @@
       var TextToBeCity = document.getElementById("city").value;
       document.getElementById("city-name").innerText = TextToBeCity;
 
+      document.getElementById("small").style.display = "none";
+
     }
 
   </script>
@@ -434,7 +436,7 @@
     <div class="email">
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required>
-      <!-- <small>Format: exmple@gmail.com</small> -->
+       <small id="small">Format: exmple@gmail.com</small>
 
     </div>
     <div type="text" id="mail"></div>
