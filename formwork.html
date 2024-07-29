@@ -204,17 +204,20 @@
     .error {
       border: 2px solid red !important;
     }
-    .item>label::after{
-      content:" *";
+
+    .item>label::after {
+      content: " *";
       color: red;
     }
-    .email>label::after{
-      content:" *";
+
+    .email>label::after {
+      content: " *";
       color: red;
 
     }
-    .address>label::after{
-      content:" *";
+
+    .address>label::after {
+      content: " *";
       color: red;
 
 
@@ -337,10 +340,43 @@
         return false;
       }
 
+      document.getElementById("first").style.display = "none";
+      var InputName = document.getElementById("firstName").value;
+      document.getElementById("name").innerText = InputName;
 
-      alert("Form Submitted")
+      document.getElementById("second").style.display = "none";
+      var TextToBeLast = document.getElementById("lastName").value;
+      document.getElementById("last").innerText = TextToBeLast;
 
-  }
+      document.getElementById("third").style.display = "none";
+      var TextToBeNumber = document.getElementById("phone").value;
+      document.getElementById("number").innerText = TextToBeNumber;
+
+      document.getElementById("four").style.display = "none";
+      var TextToBeEmail = document.getElementById("email").value;
+      document.getElementById("mail").innerText = TextToBeEmail;
+
+      document.getElementById("five").style.display = "none";
+      var TextToBeAddress = document.getElementById("address").value;
+      document.getElementById("address-line").innerText = TextToBeAddress;
+
+      document.getElementById("six").style.display = "none";
+      var TextToBeStreet = document.getElementById("street").value;
+      document.getElementById("street-name").innerText = TextToBeStreet;
+
+      document.getElementById("seven").style.display = "none";
+      var TextToBePostalCode = document.getElementById("postalCode").value;
+      document.getElementById("code").innerText = TextToBePostalCode;
+
+      document.getElementById("eight").style.display = "none";
+      var TextToBeCity = document.getElementById("city").value;
+      document.getElementById("city-name").innerText = TextToBeCity;
+
+
+
+
+
+    }
 
 
 
@@ -354,50 +390,56 @@
   <form name="myForm" onsubmit="return false">
     <h1>Simple Form Design</h1>
     <div class="firstline">
-      <div class="item">
+      <div class="item" id="first">
         <label for="firstName">First Name</label>
         <input type="text" id="firstName" name="firstName" required>
       </div>
-      <div class="item">
+      <div type="text" id="name"></div>
 
+      <div class="item" id="second">
         <label for="lastName">Last Name</label>
         <input type="text" id="lastName" name="lastName" required>
       </div>
-      <div class="item">
+      <div type="text" id="last"></div>
+      <div class="item" id="third">
 
         <label for="phone">Mobile/Land line</label>
         <input type="text" id="phone" name="phone" required>
       </div>
+      <div type="text" id="number"></div>
     </div>
-    <div class="email">
+    <div class="email" id="four">
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required>
       <small>Format: exmple@gmail.com</small>
 
     </div>
+    <div type="text" id="mail"></div>
 
-    <div class="address">
+    <div class="address" id="five">
       <label for="address">Address Line</label>
       <input type="text" id="address" name="address">
-
-
     </div>
+    <div type="text" id="address-line"></div>
 
     <div class="secondline">
-      <div class="item">
+      <div class="item" id="six">
         <label for="street">Street</label>
         <input type="text" id="street" name="street">
       </div>
-      <div class="item">
+      <div type="text" id="street-name"></div>
+      <div class="item" id="seven">
 
         <label for="postalCode">Postal Code</label>
         <input type="text" id="postalCode" name="postalCode">
       </div>
-      <div class="item">
-
+      <div type="text" id="code"></div>
+      <div class="item" id="eight">
         <label for="city">City</label>
+
         <input type="text" id="city" name="city">
       </div>
+      <div type="text" id="city-name"></div>
     </div>
 
     <div>
@@ -471,6 +513,7 @@
 
       <button onclick="validateForm()" type="submit">Submit</button>
   </form>
+
 </body>
 
 </html>
