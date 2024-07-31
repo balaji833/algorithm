@@ -240,12 +240,28 @@
 
 
     }
+    .index>label{
+      color: #5c5555;
+      font-size: large;
+
+
+    }
+    .country>label{
+      color: #5c5555;
+      font-size: large;
+    }
+    .message>label{
+      color: #5c5555;
+      font-size: large;
+    }
+    .like> div>label{
+      color: #5c5555;
+      font-size: large;
+    }
 
    
   </style>
   <script>
-
-
 
     function validateForm() {
 
@@ -361,37 +377,28 @@
       }
 
       document.getElementById("firstName").style.display = "none";
-      var InputName = document.getElementById("firstName").value;
-      document.getElementById("name").innerText = InputName;
+      document.getElementById("name").innerText = document.getElementById("firstName").value;
 
       document.getElementById("lastName").style.display = "none";
-      var TextToBeLast = document.getElementById("lastName").value;
-      document.getElementById("last").innerText = TextToBeLast;
+      document.getElementById("last").innerText = document.getElementById("lastName").value;
 
       document.getElementById("phone").style.display = "none";
-      var TextToBeNumber = document.getElementById("phone").value;
-      document.getElementById("number").innerText = TextToBeNumber;
+      document.getElementById("number").innerText = document.getElementById("phone").value;
 
       document.getElementById("email").style.display = "none";
-      var TextToBeEmail = document.getElementById("email").value;
-      document.getElementById("mail").innerText = TextToBeEmail;
+      document.getElementById("mail").innerText = document.getElementById("email").value;
 
       document.getElementById("address").style.display = "none";
-      var TextToBeAddress = document.getElementById("address").value;
-      document.getElementById("address-line").innerText = TextToBeAddress;
+      document.getElementById("address-line").innerText = document.getElementById("address").value;
 
       document.getElementById("street").style.display = "none";
-      var TextToBeStreet = document.getElementById("street").value;
-      document.getElementById("street-name").innerText = TextToBeStreet;
+      document.getElementById("street-name").innerText = document.getElementById("street").value;
 
       document.getElementById("postalCode").style.display = "none";
-      var TextToBePostalCode = document.getElementById("postalCode").value;
-      document.getElementById("code").innerText = TextToBePostalCode;
+      document.getElementById("code").innerText = document.getElementById("postalCode").value;
 
       document.getElementById("city").style.display = "none";
-      var TextToBeCity = document.getElementById("city").value;
-      document.getElementById("city-name").innerText = TextToBeCity;
-
+      document.getElementById("city-name").innerText = document.getElementById("city").value;
       document.getElementById("small").style.display = "none";
 
     }
@@ -470,9 +477,11 @@
       
     </div>
 
-    <div>
+    <div class="index">
       <label>Gender</label>
+      
       <div class="gender">
+        
         <input type="radio" id="male" name="gender" value="male">
         <label for="male">Male</label>
         <input type="radio" id="female" name="gender" value="female">
@@ -480,7 +489,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="country">
       <label for="country">Country</label>
       <select id="country" name="country">
         <option value="">--Choose your country--</option>
