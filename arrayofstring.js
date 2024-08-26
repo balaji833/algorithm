@@ -8,4 +8,4 @@ return sum;
 
 }
 var a=string( ["balaji","vasanth","pushparaj","anbu","arvind","jeeva","vijayraj","gokul","ragunath"]);
-console.log(a)
+console.log(a);
