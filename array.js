@@ -1,13 +1,22 @@
-var array = ["balaji", "santhosh", "deepak", "ant", "vasanth"];
-var result="";
 
-for (i = 0; i < array.length; i++) {
+function array(strings) {
+  var result = "";
 
-  if (i < array[i].length) {
-    result+=array[i][array[i].length-1-i];
-  }
-  else {
-      result+="-";
+  for (var i = 0; i < strings.length; i++) {
+    var currentString = strings[i];
+
+    if (i < currentString.length) {
+     
+      result += currentString[i];
+    } else {
+
+      result += "-";
     }
   }
-  console.log(result);
+
+  return result;
+}
+
+
+var a = array(["balaji", "santhosh", "deepak","ant"]);
+console.log(a); 
