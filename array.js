@@ -17,6 +17,5 @@ function array(strings) {
   return result;
 }
 
-
 var a = array(["balaji", "santhosh", "deepak","ant"]);
 console.log(a); 
