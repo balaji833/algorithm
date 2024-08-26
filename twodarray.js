@@ -1,7 +1,7 @@
 // odd row addtion
 // even row subraction progarm
 
-var twoDArray = [[2, 3, 4,], [2, 3, 4], [12, 13, 14, 9], [1, 2, 3], [1, 2, 3]]
+function array(twoDArray){
 var result = [];
 var maxArraySize = 0;
 for (i = 0; i < twoDArray.length; i++) {
@@ -23,13 +23,15 @@ for (i = 0; i < maxArraySize; i++) {
   }
   result.push(sum);
 }
-console.log(result);
+return result;
+}
+var twoDArray =array ([[2, 3, 4,], [2, 3, 4, 4], [12, 13, 14, 15, 90]]);
+console.log(twoDArray);
 
 
 // row addition program in two dimensional array
 
-
-var twoDArray = [[2, 3, 4,], [2, 3, 4, 4], [12, 13, 14, 15, 90]]
+function arrays(twoDArray){
 var result = [];
 var maxArraySize = 0;
 for (i = 0; i < twoDArray.length; i++) {
@@ -46,4 +48,5 @@ for (i = 0; i < maxArraySize; i++) {
   }
   result.push(sum);
 }
-console.log(result);
+return result;
+}
