@@ -1,5 +1,5 @@
 function Length(string) {
-    this.string = this.string;
+    this.string = string;
     this.result = [];
    
     for (i = 0; i < string.length; i++){
@@ -9,3 +9,7 @@ function Length(string) {
 }
 const obj = new Length(["balaji","ant"]);
 console.log(obj.result);
+
+
+
+
