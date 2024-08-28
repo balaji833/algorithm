@@ -23,5 +23,6 @@ function alternateSumColumns(twoDArray) {
     return result;
   }
   
-  let input = alternateSumColumns([[2, 3, 4], [2, 3, 4, 4], [12, 13, 14, 15, 90]]);
-  console.log(input);
+  let arrayWithAlternateSumColumns = alternateSumColumns([[2, 3, 4], [2, 3, 4, 4], [12, 13, 14, 15, 90]]);
+  console.log(arrayWithAlternateSumColumns);
+  
