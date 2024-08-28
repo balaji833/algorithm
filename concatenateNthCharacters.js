@@ -14,5 +14,5 @@ function concatenateNthCharacters(strings) {
   return result;
 }
 
-let input = concatenateNthCharacters(["balaji", "santhosh", "deepak","ant"]);
-console.log(input);
+let concatenatedNthCharacters = concatenateNthCharacters(["balaji", "santhosh", "deepak", "ant"]);
+console.log(concatenatedNthCharacters);
