@@ -7,5 +7,5 @@ function findMinimum() {
         return min;
     }
 }
-var input = findMinimum(1, 2, 3, 4, 5, 7,)
-console.log(input);
+var numbers = findMinimum(1, 2, 3, 4, 5, 7,)
+console.log(numbers);
