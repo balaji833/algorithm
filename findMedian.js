@@ -1,7 +1,7 @@
 
 function findMedian(arrayOfCenter){
-var centerElement = Math.floor(arrayOfCenter.length / 2);
-var result = [];
+let centerElement = Math.floor(arrayOfCenter.length / 2);
+let result = [];
 if (arrayOfCenter.length % 2 === 0) {
     result = (arrayOfCenter[centerElement - 1] + arrayOfCenter[centerElement]) / 2;
 }
@@ -11,5 +11,5 @@ else {
 return result ;
 }
 
-var input =findMedian([1,2,3,4]);
-console.log(input);
+let numbers =findMedian([1,2,3,4]);
+console.log(numbers);
