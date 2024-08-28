@@ -1,5 +1,3 @@
-
-
 function sumColumns(twoDArray) {
   let result = [];
   let maxArraySize = 0;
