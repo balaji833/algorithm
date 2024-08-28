@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <script>
+        function submitform() {
+            document.getElementById("form").style.display = "none";
+            var InputName = document.getElementById("name").value;
+            document.getElementById("firstName").innerText = InputName;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <form id="myForm" onsubmit="return false">
+      
+
+        <label for="name">Name:</label>
+        <div id="form">
+       
+        <input type="text" id="name" name="name">
+        <input type="submit" onclick="submitform()" value="Submit">
+    </div>
+
+</form>
+
+
+    <div
+    id="firstName">
+    </div>
+
+</body>

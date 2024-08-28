@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .shape-container {
+            display: none;
+        }
+        form {
+            width: 200px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function changeShape() {
+            var selectElement = document.getElementById("shapes");
+            var selectedValue = selectElement.value;
+            var shapeContainers = document.querySelectorAll('.shape-container');
+            shapeContainers.forEach(function(container) {
+                container.style.display = 'none';
+            });
+            if (selectedValue) {
+                var selectedContainer = document.getElementById('of-' + selectedValue);
+                if (selectedContainer) {
+                    selectedContainer.style.display = 'block';
+                }
+            }
+        }
+
+        function calculation() {
+            var selectedShape = document.getElementById("shapes").value;
+
+            if (selectedShape === "rectangle") {
+                rectangleShapes();
+            } else if (selectedShape === "square") {
+                squareShapes();
+            } else if (selectedShape === "triangle") {
+                triangleShapes();
+            } else if (selectedShape === "circle") {
+                circleShapes();
+            }
+        }
+
+        function rectangleShapes() {
+            var rectangleLength = document.getElementById("length").value;
+            var rectangleWidth = document.getElementById("width").value;
+            var rectangle = rectangleLength * rectangleWidth;
+            document.getElementById("rectangle-result").innerText = "Area of rectangle is " + rectangle;
+        }
+
+        function squareShapes() {
+            var squareSideLength = document.getElementById("side-length").value;
+            var square = squareSideLength * squareSideLength;
+            document.getElementById("square-result").innerText = "Area of square is " + square;
+        }
+
+        function triangleShapes() {
+            var triangleBase = document.getElementById("triangle-base").value;
+            var triangleHeight = document.getElementById("triangle-height").value;
+            var triangle = 0.5 * triangleBase * triangleHeight;
+            document.getElementById("triangle-result").innerText = "Area of triangle is " + triangle;
+        }
+
+        function circleShapes() {
+            var circleRadius = document.getElementById("circle-radius").value;
+            var circle = Math.PI * circleRadius * circleRadius;
+            circle = circle.toFixed(3);
+            document.getElementById("circle-result").innerText = "Area of circle is " + circle;
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm" onsubmit="calculation(); return false;">
+        <div class="container">
+            <h1>Shapes</h1>
+            <select onchange="changeShape()" id="shapes" name="shapes-models">
+                <option>--shapes--</option>
+                <option value="rectangle">Rectangle</option>
+                <option value="square">Square</option>
+                <option value="triangle">Triangle</option>
+                <option value="circle">Circle</option>
+            </select>
+
+            <div id="of-rectangle" class="shape-container">
+                <h2>Rectangle</h2>
+                <label for="length">Length:</label>
+                <input type="number" id="length" name="rectangleLength" required>
+                <label for="width">Width:</label>
+                <input type="number" id="width" name="rectangleWidth" required>
+            </div>
+            <div id="rectangle-result"></div>
+
+            <div id="of-square" class="shape-container">
+                <h2>Square</h2>
+                <label for="side-length">Side Length:</label>
+                <input type="number" id="side-length" name="squareSideLength" required>
+            </div>
+            <div id="square-result"></div>
+
+            <div id="of-triangle" class="shape-container">
+                <h2>Triangle</h2>
+                <label for="triangle-base">Base:</label>
+                <input type="number" id="triangle-base" name="triangleBase" required>
+                <label for="triangle-height">Height:</label>
+                <input type="number" id="triangle-height" name="triangleHeight" required>
+            </div>
+            <div id="triangle-result"></div>
+
+            <div id="of-circle" class="shape-container">
+                <h2>Circle</h2>
+                <label for="circle-radius">Radius:</label>
+                <input type="number" id="circle-radius" name="circleRadius" required>
+            </div>
+            <div id="circle-result"></div>
+        </div>
+
+        <button type="submit" id="result">Submit</button>
+    </form>
+</body>
+</html>
