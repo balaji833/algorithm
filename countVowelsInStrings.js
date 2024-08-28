@@ -14,5 +14,5 @@ function countVowelsInStrings(names) {
     }
     return results;
 }
-let countOfVowels = countVowelsInStrings(["balaji", "santhosh","deepak","ant"]);
+let countOfVowels = countVowelsInStrings(["balaji", "santhosh", "deepak", "ant"]);
 console.log(countOfVowels);
