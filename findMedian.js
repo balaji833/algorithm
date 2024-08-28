@@ -1,4 +1,3 @@
-
 function findMedian(arrayOfCenter){
 let centerElement = Math.floor(arrayOfCenter.length / 2);
 let result = [];
