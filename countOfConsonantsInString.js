@@ -14,6 +14,6 @@ function countOfConsonantsInString(names) {
     return result;
 }
 
-let input = countOfConsonantsInString(["balaji","santhosh"]);
-console.log(input); 
+let countofconsonants= countOfConsonantsInString(["balaji","santhosh"]);
+console.log(countofconsonants); 
 
