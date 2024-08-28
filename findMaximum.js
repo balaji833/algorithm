@@ -1,5 +1,5 @@
 function findMaximum() {
-    var max = Infinity;
+    let max = Infinity;
     for (i = 0; i < arguments.length; i++) {
         if (arguments[i] > max){
             max = arguments[i]
@@ -7,5 +7,5 @@ function findMaximum() {
         return max;
     }
 }
-var input = findMaximum(1,2,3,4,6,6,7,8,8,9,9)
-console.log(input);
+let numbers = findMaximum(1,2,3,4,6,6,7,8,8,9,9)
+console.log(numbers);
