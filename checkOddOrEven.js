@@ -10,5 +10,5 @@ function checkOddOrEven(number) {
         return result;
     }
 }
-var input = checkOddOrEven([2])
-console.log(input);
+var numbers = checkOddOrEven([2])
+console.log(numbers);
