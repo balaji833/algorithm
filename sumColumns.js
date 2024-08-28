@@ -20,5 +20,5 @@ function sumColumns(twoDArray) {
   return result;
 }
   
-let input = sumColumns([[2, 3, 4], [2, 3, 4, 4], [12, 13, 14, 15, 90]]);
-console.log(input);
+let columnSums = sumColumns([[2, 3, 4], [2, 3, 4, 4], [12, 13, 14, 15, 90]]);
+console.log(columnSums);
