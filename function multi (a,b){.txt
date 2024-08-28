@@ -1,7 +1,0 @@
-function multi (a,b){
-    return a*b;
-    
-}
-const number=[2,3]
-const a = multi.apply(null,number);
-console.log(apply)
