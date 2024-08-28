@@ -21,6 +21,3 @@ function trapezoid(a, b, h) {
 function ellipse(a, b) {
     return Math.PI * a * b;
 }
-
-
-
