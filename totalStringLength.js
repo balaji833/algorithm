@@ -6,5 +6,5 @@ function totalStringLength(array) {
     return sum;
 }
 
-var input = totalStringLength(["balaji", "vasanth", "pushparaj", "anbu", "arvind", "jeeva", "vijayraj", "gokul", "ragunath"]);
+let input = totalStringLength(["balaji", "vasanth", "pushparaj", "anbu", "arvind", "jeeva", "vijayraj", "gokul", "ragunath"]);
 console.log(input);
