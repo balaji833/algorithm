@@ -1,4 +1,3 @@
-
 function rectangle(lenght, width) {
     return lenght * width;
 }
