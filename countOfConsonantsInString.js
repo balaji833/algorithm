@@ -16,4 +16,3 @@ function countOfConsonantsInString(names) {
 
 let countofconsonants= countOfConsonantsInString(["balaji","santhosh"]);
 console.log(countofconsonants); 
-
