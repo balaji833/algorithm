@@ -6,7 +6,7 @@ function sumAdjacentPairs(twonumbers) {
             result.push(sum);
         }
         else {
-            result.push(twonumbers[i])
+            result.push(twonumbers[i]);
         }
     }
     return result;
