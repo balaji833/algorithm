@@ -1,6 +1,6 @@
 function sumAdjacentPairs(twonumbers) {
     let result = [];
-    for (i = 0; i < twonumbers.length; i += 2) {
+    for (let i = 0; i < twonumbers.length; i += 2) {
         if (i + 1 < twonumbers.length) {
             let sum = twonumbers[i] + twonumbers[i + 1];
             result.push(sum);
