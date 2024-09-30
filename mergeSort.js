@@ -38,5 +38,3 @@ function merge(leftArr, rightArr) {
 }
 let arr = [2,3,1,4,6,7,5];
 console.log(mergesort(arr));
-
-
