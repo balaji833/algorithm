@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike - Just Do It</title>
+    <link href="nike.png" rel="icon">
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #000;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        #menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        #menu a:hover {
+            color: #f00;
+        }
+
+        #utilities {
+            display: flex;
+            align-items: center;
+        }
+
+        #search input {
+            border: none;
+            background: #f5f5f5;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+            outline: none;
+        }
+
+        #search input::placeholder {
+            font-size: 14px;
+        }
+
+        .hero {
+            text-align: center;
+            position: relative;
+            color: #fff;
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            padding: 150px 20px;
+            overflow: hidden;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        .hero .btn {
+            background: #f00;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background: #c00;
+            transform: scale(1.1);
+        }
+
+      
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin: 50px 0 20px;
+            color: #000;
+        }
+
+        .scroll {
+            display: flex;
+            overflow-x: scroll;
+            padding: 20px;
+            gap: 20px;
+            scroll-behavior: smooth;
+        }
+
+        .scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .product {
+            flex: 0 0 auto;
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .product .btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background: red;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .product .btn:hover {
+            background: black;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color:whitesmoke;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="download.png" alt="Nike Logo" style="width: 60px; height: 60px;">
+        </div>
+        <nav id="menu">
+            <a href="#new">New & Featured</a>
+            <a href="#men">Men</a>
+            <a href="#women">Women</a>
+            <a href="#kids">Kids</a>
+            <a href="#sales">Sales</a>
+            <a href="#snkrs">SNKRS</a>
+        </nav>
+        <div id="utilities">
+            <div id="search">
+                <input type="search" placeholder="Search">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Move, Shop, Customize & Celebrate With Us</h1>
+            <p>Join Nike Membership for exclusive access to the best products and inspiration.</p>
+            <a href="#join" class="btn">Join Us</a>
+            <video autoplay loop muted>
+                <source src="nikev.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section id="wishlist">
+            <h2 class="section-title">Top of the Wishlist Kicks</h2>
+            <p style="text-align: center;">All-time icons and sports-inspired gifts for everyone on your list.</p>
+            <div class="scroll">
+                <div class="product">
+                    <img src="12.webp" alt="Nike Pegasus 41PRM">
+                    <p>Nike Pegasus 41PRM</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+                <div class="product">
+                    <img src="W+AIR+ZOOM+PEGASUS+41+PRM.webp" alt="Nike Vapor 16">
+                    <p>Nike Vapor 16 </p>
+                    <button class="btn">Shop Now</button>
+                </div>
+                <div class="product">
+                    <img src="W+NIKE+CORTEZ.webp" alt="Nike Mercurial">
+                    <p>Nike Mercurial Vapor 16</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+                <div class="product">
+                    <img src="AIR+FORCE+1+LOW+EVO.webp" alt="Nike Mercurial">
+                    <p>Nike Mercurial Vapor 16</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+                <div class="product">
+                    <img src="AIR+ZOOM+PEGASUS+41+EK.webp" alt="Nike Mercurial">
+                    <p>Nike Vapor 16</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+                <div class="product">
+                    <img src="WMNS+AIR+FORCE+1+'07+ESS.webp" alt="Nike Mercurial">
+                    <p>Nike Mercurial</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+                <div class="product">
+                    <img src="AIR+ZOOM+PEGASUS+41+PRM.webp" alt="Nike Mercurial">
+                    <p>Nike 16</p>
+                    <button class="btn">Shop Now</button>
+                </div>
+                
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nike. All rights reserved. <a href="#terms">Terms</a> | <a href="#privacy">Privacy</a></p>
+    </footer>
+</body>
+</html>
