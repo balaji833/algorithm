@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 5px;
+            margin: 20px auto;
+            width: 320px;
+        }
+        .cell {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            background: lightgray;
+            cursor: pointer;
+        }
+        .cell.taken {
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div class="board" id="board"></div>
+    <h2 id="status">Player X's turn</h2>
+    <button onclick="resetGame()">Reset</button>
+    
+    <script>
+        const board = document.getElementById("board");
+        const status = document.getElementById("status");
+        let currentPlayer = "X";
+        let gameState = ["", "", "", "", "", "", "", "", ""];
+        
+        function checkWinner() {
+            const winningCombos = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8],
+                [0, 3, 6], [1, 4, 7], [2, 5, 8],
+                [0, 4, 8], [2, 4, 6]
+            ];
+            for (let combo of winningCombos) {
+                const [a, b, c] = combo;
+                if (gameState[a] && gameState[a] === gameState[b] && gameState[a] === gameState[c]) {
+                    status.innerText = `Player ${gameState[a]} Wins!`;
+                    document.querySelectorAll(".cell").forEach(cell => cell.classList.add("taken"));
+                    return true;
+                }
+            }
+            if (!gameState.includes("")) {
+                status.innerText = "It's a Draw!";
+                return true;
+            }
+            return false;
+        }
+        
+        function handleClick(event) {
+            const index = event.target.dataset.index;
+            if (!gameState[index]) {
+                gameState[index] = currentPlayer;
+                event.target.innerText = currentPlayer;
+                event.target.classList.add("taken");
+                if (!checkWinner()) {
+                    currentPlayer = currentPlayer === "X" ? "O" : "X";
+                    status.innerText = `Player ${currentPlayer}'s turn`;
+                }
+            }
+        }
+        
+        function resetGame() {
+            gameState.fill("");
+            currentPlayer = "X";
+            status.innerText = "Player 1 turn";
+            board.innerHTML = "";
+            createBoard();
+        }
+        
+        function createBoard() {
+            gameState.forEach((_, index) => {
+                const cell = document.createElement("div");
+                cell.classList.add("cell");
+                cell.dataset.index = index;
+                cell.addEventListener("click", handleClick);
+                board.appendChild(cell);
+            });
+        }
+        
+        createBoard();
+    </script>
+</body>
+</html>
